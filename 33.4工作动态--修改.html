@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>南阳党建大数据平台</title>
+  <meta name="keywords" content="南阳党建大数据平台">
+  <meta name="description" content="南阳党建大数据平台">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="css/nydj_style.css"><!-- 页面主要css文件 -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="layui/layui.js"></script>
+  <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <!--   兼容IE9以下的低版本浏览器对于css3的不支持以及对于媒体查询的不支持。 -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]--> 
+</head>
+<body>
+     <div class="wid_content bg_white">
+            <div class="container clearfix top_head">
+               <div class="top_title fl"><img src="images/dh.png" alt="">工作动态</div>
+               <div class="fr top_right">
+                    <a href="javascript:;" class="top_atoggle">角色切换</a>
+                    <a href="javascript:;" class="top_atoggle">操作说明</a>
+                    <a href="javascript:;" class="top_atoggle">返回首页</a>
+                    <a href="javascript:;" class="top_atoggle">返回上一页</a>
+               </div>
+            </div>
+     </div>
+     <div class="wid_content martop10 bg_white">
+            <div class="clearfix">
+                <div class="threeDivTog tp_mart100">
+                     <div class="ac_dehxqd">
+                           <div class="wid1">
+                                 <form class="layui-form" action="">
+                                    <div class="layui-form-item">
+                                          <label class="layui-form-label">首页图片</label>
+                                          <div class="layui-input-block">
+                                              <div class="layui-upload imgupload1">
+                                                    <button type="button" class="layui-btn" id="imgupload"></button><input class="layui-upload-file" type="file" accept="undefined" name="file">
+                                                    <img src="images/inpic.png" alt="">
+                                                    <p>点击上传图片</p>
+                                              </div>
+                                          </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">标题</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="title" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item checkmy_define">
+                                          <label class="layui-form-label">是否置顶</label>
+                                          <div class="layui-input-block">
+                                              <input type="radio" name="sex" value="是" title="是" checked="">
+                                              <input type="radio" name="sex" value="否" title="否">
+                                          </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                          <label class="layui-form-label">时间</label>
+                                          <div class="layui-input-block">
+                                              <input type="text" class="layui-input datesicon" placeholder="请选择" id="time_date">
+                                          </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">内容</label>
+                                        <div class="layui-input-block">
+                                            <textarea id="editText" style="display: none;"></textarea>
+                                        </div>
+                                    </div>
+                                     <div class="text-align-center dw_infoSave" style="width: 1000px;">
+                                            <button class="layui-btn btn_long layui-btn-primary">返回</button>
+                                            <button class="layui-btn btn_long bg-red">保存</button>
+                                     </div>
+                               </form>
+                           </div>
+                     </div>
+                </div>
+            </div>
+     </div>
+    <!--  layui文件上传 -->
+     <script>
+layui.use(['form','upload','layedit','laydate','laypage','table','layer'], function(){
+          var form = layui.form,laydate = layui.laydate,laypage = layui.laypage,table = layui.table,layer = layui.layer,layedit = layui.layedit,upload = layui.upload;
+          //日期
+          laydate.render({
+            elem: '#time_date'
+          });
+          laydate.render({
+            elem: '#fb_date2'
+          });
+  //普通图片上传
+  var uploadInst = upload.render({
+    elem: '#imgupload'
+    ,url: '/upload/'
+    ,before: function(obj){
+      //预读本地文件示例，不支持ie8
+      obj.preview(function(index, file, result){
+        $('#demo1').attr('src', result); //图片链接（base64）
+      });
+    }
+    ,done: function(res){
+      //如果上传失败
+      if(res.code > 0){
+        return layer.msg('上传失败');
+      }
+      //上传成功
+    }
+    ,error: function(){
+      //演示失败状态，并实现重传
+      var demoText = $('#demoText');
+      demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+      demoText.find('.demo-reload').on('click', function(){
+        uploadInst.upload();
+      });
+    }
+  });
+
+   /*文本编辑器*/
+   layedit.build('editText', {
+  tool: [
+  'strong' //加粗
+  ,'italic' //斜体
+  ,'underline' //下划线
+  ,'del' //删除线
+  
+  ,'|' //分割线
+  
+  ,'left' //左对齐
+  ,'center' //居中对齐
+  ,'right' //右对齐
+  ,'link' //超链接
+  ,'unlink' //清除链接
+  ,'face' //表情
+  ,'image' //插入图片
+]
+});
+   });
+</script>
+<script type="text/javascript" >
+$(document).ready(function() {
+/*展开收起*/
+var str=$('.opentext').text();
+$('.opentext').text(str.substring(0, 243)+'...');
+$('.aclicks').text('展开');
+$('.aclicks').click(function(e) {
+    if($(this).text()=='收起'){
+        $(this).siblings('.opentext').text(str.substring(0, 243)+'...');
+        $(this).text('展开');
+        $(this).siblings('.imgD').removeClass('arrowd');
+    }
+    else{
+        $(this).siblings('.opentext').text(str);
+        $(this).text('收起');
+        $(this).siblings('.imgD').addClass('arrowd');
+    }
+})
+/*删除图片*/
+  $(document).on('click', '.deletePic', function(event) {
+    $(this).parent(".upedimg").remove();
+  });
+});
+</script>
+</body>
+</html>

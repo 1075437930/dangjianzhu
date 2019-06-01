@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>南阳党建大数据平台</title>
+  <meta name="keywords" content="南阳党建大数据平台">
+  <meta name="description" content="南阳党建大数据平台">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="css/nydj_style.css"><!-- 页面主要css文件 -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="layui/layui.js"></script>
+  <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <!--   兼容IE9以下的低版本浏览器对于css3的不支持以及对于媒体查询的不支持。 -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]--> 
+</head>
+<body>
+     <div class="wid_content bg_white">
+            <div class="container clearfix top_head">
+               <div class="top_title fl"><img src="images/dh.png" alt="">驻村工作队</div>
+               <div class="fr top_right">
+                    <a href="javascript:;" class="top_atoggle">角色切换</a>
+                    <a href="javascript:;" class="top_atoggle">操作说明</a>
+                    <a href="javascript:;" class="top_atoggle">返回首页</a>
+                    <a href="javascript:;" class="top_atoggle">返回上一页</a>
+               </div>
+            </div>
+     </div>
+     <div class="wid_content dj_mart100 bg_gray">
+            <div class="container">
+                  <ul class="zcul_field clearfix">
+                        <li>
+                            <a href="40.5驻村工作队--基本信息.html">
+                                <img src="images/djztp_icon16.png">
+                                <p>基本信息</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="40.6驻村工作队--重点工作.html">
+                                <img src="images/djztp_icon17.png">
+                                <p>重点工作</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="40.7驻村工作队--工作季报4.html">
+                                <img src="images/djztp_icon22.png">
+                                <p>工作季报</p>
+                            </a>
+                        </li>
+                         <li class="zcli_active">
+                            <a href="javascript:;">
+                                <img src="images/djztp_icon23_a.png">
+                                <p>考勤管理</p>
+                            </a>
+                        </li>
+                  </ul> 
+            </div>
+     </div>
+     <div class="wid_content martt60">
+            <div class="container">
+                    <div class="yearsChose">
+                          <em>2018年</em>
+                          <em>/</em>
+                          <em class="color-red">2019年</em>
+                    </div>
+                   <div class="party_member_lsit traditional_form">
+                         <table class="layui-table" lay-data="{width: 1200, height:473, url:'test.php', page:true, id:'idTest'}" lay-filter="demo">
+                              <thead>
+                                <tr>
+                                  <th lay-data="{field:'id'}">月份</th>
+                                  <th lay-data="{field:'username'}">打卡次数</th>
+                                  <th lay-data="{fixed: 'right',toolbar: '#barDemo'}">详情</th>
+                                </tr>
+                              </thead>
+                            </table>
+                             
+                            <script type="text/html" id="barDemo">
+                              <a class="color-red" lay-event="detail" href="40.9驻村工作队--考勤管理--详情.html">查看详情</a>
+                            </script>
+                         <!-- <table class="layui-hide party_table" id="table_test"></table> -->
+                   </div>
+            </div>
+     </div>
+    <!--  layui文件上传 -->
+     <script>
+layui.use(['form', 'laydate','laypage','table','layer'], function(){
+         var form = layui.form,laydate = layui.laydate,laypage = layui.laypage,table = layui.table,layer = layui.layer;
+  //日期
+          //日期
+          laydate.render({
+            elem: '#fb_date1'
+          });
+          laydate.render({
+            elem: '#fb_date2'
+          });
+  table.render({
+               elem: '#table_test'
+              ,url:'test.php'
+              ,cols: [[{field:'id',title: '月份'}
+                ,{field:'username', title: '打卡次数'}
+                ,{field:'city',title: '详情'}
+              ]]
+              ,page:{theme: '#c00'}
+            });
+   });
+</script>
+<script type="text/javascript">
+         $(document).ready(function() {
+          /*党员队伍/党组织信息切换*/
+            $(".setBtn").click(function(event) {
+               event.stopPropagation();
+        $(this).children('.zsgc_btns').toggleClass('ng-hide');
+      });
+        $(".setBtn").children('.zsgc_btns').click(function(event) {
+           event.stopPropagation();
+       });
+         });
+     </script>
+</body>
+</html>

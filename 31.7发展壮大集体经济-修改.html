@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>南阳党建大数据平台</title>
+  <meta name="keywords" content="南阳党建大数据平台">
+  <meta name="description" content="南阳党建大数据平台">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="css/nydj_style.css"><!-- 页面主要css文件 -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="layui/layui.js"></script>
+  <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+  <script src="http://192.168.4.54:7301/swdj/res/jpsy/js/regionSelect/js/Popt.js"></script>
+  <script src="http://192.168.4.54:7301/swdj/res/jpsy/js/regionSelect/js/cityJson.js"></script>
+  <script src="http://192.168.4.54:7301/swdj/res/jpsy/js/regionSelect/js/citySet.js"></script>
+  <script type="text/javascript" src="http://192.168.4.54:7301/swdj/res/jpsy/js/regionSelect/js/placeholder.js"></script>
+  <!--   兼容IE9以下的低版本浏览器对于css3的不支持以及对于媒体查询的不支持。 -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]--> 
+</head>
+<body>
+     <div class="wid_content bg_white">
+            <div class="container clearfix top_head">
+               <div class="top_title fl" style="font-size:43px;"><img src="images/dh.png" alt="">发展壮大集体经济</div>
+               <div class="fr top_right">
+                    <a href="javascript:;" class="top_atoggle">角色切换</a>
+                    <a href="javascript:;" class="top_atoggle">操作说明</a>
+                    <a href="javascript:;" class="top_atoggle">返回首页</a>
+                    <a href="javascript:;" class="top_atoggle">返回上一页</a>
+               </div>
+            </div>
+     </div>
+     <div class="wid_content tp_mart100 bg_white">
+            <div class="clearfix">
+                <div class="threeDivTog martop10">
+                     <div class="ac_dehxqd leftlabel">
+                           <div class="wid1">
+                                 <form class="layui-form" action="">
+                                      <div class="layui-form-item">
+                                          <label class="layui-form-label">村名称</label>
+                                          <div class="layui-input-block">
+                                             <input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+                                          </div>
+                                      </div>
+                                      <div class="layui-form-item">
+                                        <label class="layui-form-label">实施方案</label>
+                                        <div class="layui-input-block">
+                                            <textarea id="editText" style="display: none;"></textarea>
+                                        </div>
+                                     </div>
+                                     <div class="layui-form-item">
+                                        <label class="layui-form-label">发展状况</label>
+                                        <div class="layui-input-block">
+                                            <textarea id="editText1" style="display: none;"></textarea>
+                                        </div>
+                                     </div>
+                                     <div class="layui-form-item">
+                                            <label class="layui-form-label">所属区域</label>
+                                            <div class="layui-input-block">
+                                                <div class="fieldInputDiv fl">
+                                                     <input class="layui-input" type="text" id="partyAddress" readonly="" placeholder="请选择">
+                                                       <i></i>
+                                                 </div>
+                                           </div>
+                                     </div>
+                                     <div class="layui-form-item">
+                                            <label class="layui-form-label">请输入搜索地图位置</label>
+                                            <div class="layui-input-block location-ad" style="width: 840px;">
+                                                <input type="text" class="layui-input" id="suggestId" size="20" value="" autocomplete="off">
+                                            </div>
+                                      </div>
+                                      <div class="layui-form-item">
+                                            <label class="layui-form-label">&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                            <div class="layui-input-block">
+                                                  <iframe src="https://map.baidu.com/" style="width:100%;height:460px;"></iframe>
+                                            </div>
+                                      </div>
+                                     <div class="text-align-center dw_infoSave">
+                                             <button class="layui-btn btn_long layui-btn-primary">返回</button>
+                                            <button class="layui-btn btn_long bg-red">保存</button>
+                                     </div>
+                               </form>
+                           </div>
+                     </div>
+                </div>
+            </div>
+     </div>
+    <!--  layui文件上传 -->
+     <script>
+layui.use(['form', 'laydate','laypage','table','upload','layedit'], function(){
+          var form = layui.form,laypage = layui.laypage,table = layui.table,upload = layui.upload,layedit = layui.layedit,laydate = layui.laydate;
+  //日期
+          laydate.render({
+            elem: '#begin_date'
+          });
+          laydate.render({
+            elem: '#end_date'
+          });
+        //普通图片上传
+  var uploadInst = upload.render({
+    elem: '#imgupload'
+    ,url: '/upload/'
+    ,before: function(obj){
+      //预读本地文件示例，不支持ie8
+      obj.preview(function(index, file, result){
+        $('#demo1').attr('src', result); //图片链接（base64）
+      });
+    }
+    ,done: function(res){
+      //如果上传失败
+      if(res.code > 0){
+        return layer.msg('上传失败');
+      }
+      //上传成功
+    }
+    ,error: function(){
+      //演示失败状态，并实现重传
+      var demoText = $('#demoText');
+      demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+      demoText.find('.demo-reload').on('click', function(){
+        uploadInst.upload();
+      });
+    }
+  });
+  //指定允许上传的文件类型
+  upload.render({
+    elem: '#uploadtest3'
+    ,url: '/upload/'
+    ,accept: 'file' //普通文件
+    ,done: function(res){
+      console.log(res)
+    }
+  });
+  /*文本编辑器*/
+   layedit.build('editText', {
+  tool: [
+  'strong' //加粗
+  ,'italic' //斜体
+  ,'underline' //下划线
+  ,'del' //删除线
+  
+  ,'|' //分割线
+  
+  ,'left' //左对齐
+  ,'center' //居中对齐
+  ,'right' //右对齐
+  ,'link' //超链接
+  ,'unlink' //清除链接
+  ,'face' //表情
+  ,'image' //插入图片
+]
+});
+   /*文本编辑器*/
+   layedit.build('editText1', {
+  tool: [
+  'strong' //加粗
+  ,'italic' //斜体
+  ,'underline' //下划线
+  ,'del' //删除线
+  
+  ,'|' //分割线
+  
+  ,'left' //左对齐
+  ,'center' //居中对齐
+  ,'right' //右对齐
+  ,'link' //超链接
+  ,'unlink' //清除链接
+  ,'face' //表情
+  ,'image' //插入图片
+]
+});
+   });
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+      /* 活动详情，活动花絮，活动签到切换*/
+      $(".activity_three li").click(function(event) {
+        $(this).addClass('active').siblings('li').removeClass('active');
+        $(".threeDivTog .ac_dehxqd").eq($(this).index()).removeClass('ng-hide').siblings('.ac_dehxqd').addClass('ng-hide');
+      });
+      /*点击签到未签到切换*/
+      $(".qiandaoBtn a").click(function(event) {
+        $(this).addClass('a_active').siblings('a').removeClass('a_active');
+        $(".qiandao_list").eq($(this).index()).removeClass('ng-hide').siblings('.qiandao_list').addClass('ng-hide');
+      });
+      $("#partyAddress").click(function (e) {
+    SelCity(this,e);
+  });
+    });
+</script>
+</body>
+</html>

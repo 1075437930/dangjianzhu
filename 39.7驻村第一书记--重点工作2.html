@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>南阳党建大数据平台</title>
+  <meta name="keywords" content="南阳党建大数据平台">
+  <meta name="description" content="南阳党建大数据平台">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="css/nydj_style.css"><!-- 页面主要css文件 -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="layui/layui.js"></script>
+  <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <!--   兼容IE9以下的低版本浏览器对于css3的不支持以及对于媒体查询的不支持。 -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]--> 
+</head>
+<body>
+     <div class="wid_content bg_white">
+            <div class="container clearfix top_head">
+               <div class="top_title fl"><img src="images/dh.png" alt="">驻村第一书记</div>
+               <div class="fr top_right">
+                    <a href="javascript:;" class="top_atoggle">角色切换</a>
+                    <a href="javascript:;" class="top_atoggle">操作说明</a>
+                    <a href="javascript:;" class="top_atoggle">返回首页</a>
+                    <a href="javascript:;" class="top_atoggle">返回上一页</a>
+               </div>
+            </div>
+     </div>
+     <div class="wid_content bg_gray dj_mart100">
+            <div class="container">
+                  <ul class="zcul_field clearfix">
+                        <li>
+                            <a href="39.6驻村第一书记--基本信息1.html">
+                                <img src="images/djztp_icon16.png">
+                                <p>基本信息</p>
+                            </a>
+                        </li>
+                        <li class="zcli_active">
+                            <a href="javascript:;">
+                                <img src="images/djztp_icon17_a.png">
+                                <p>重点工作</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="39.8驻村第一书记--工作经费3.html">
+                                <img src="images/djztp_icon18.png">
+                                <p>工作经费</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="39.9驻村第一书记--工作季报4.html">
+                                <img src="images/djztp_icon22.png">
+                                <p>工作季报</p>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="39.91驻村第一书记--考勤管理5.html">
+                                <img src="images/djztp_icon23.png">
+                                <p>考勤管理</p>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="39.93驻村第一书记--工作轨迹管理.html">
+                                <img src="images/djztp_icon24.png">
+                                <p>工作轨迹管理</p>
+                            </a>
+                        </li>
+                  </ul> 
+            </div>
+     </div>
+     <div class="wid_content martt60">
+           <div class="container clearfix">
+                  <form class="layui-form" action="">
+                      <div class="layui-col-xs6">
+                            <div class="layui-form-item">
+                                 <label class="layui-inline" style="width:52px;">日期</label>
+                                 <div class="layui-inline" style="margin-right: 0;width: 433px;">
+                                      <div class=" layui-col-xs5" style="width:160px;">
+                                          <input type="text"  class="layui-input datesicon borderRed" id="fb_date1">
+                                      </div>
+                                      <div class="layui-col-xs1 text-align-center linH38">—</div>
+                                      <div class="layui-col-xs5" style="width:160px;">
+                                           <input type="text" class="layui-input datesicon borderRed" id="fb_date2">
+                                      </div>
+                                 </div>
+                             </div>
+                      </div>
+                     <div class="layui-col-xs6 text-align-right">
+                             <button class="layui-btn bg-red" type="button"><i class="layui-icon layui-icon-search" style="font-size: 24px; color: #fff;"></i>查询</button>
+                      </div>
+                </form>
+           </div>
+           <div class="container">
+                <div class="togglenav text-align-right" style="border:0;">
+                      <div class="setBtn" style="padding: 0;">
+                                <img src="images/gl.png" alt="">
+                                <div class="layui-inline zsgc_btns ng-hide">
+                                      <a href="39.7驻村第一书记--重点工作4-添加.html" onclick="addPartyMember()" class="layui-btn layui-btn-primary"><i class="layui-icon layui-icon-add-1"></i>添加</a>
+                                       <a href="39.7驻村第一书记--重点工作5-修改.html" onclick="updatePartyMember()" class="layui-btn layui-btn-primary"><i class="layui-icon layui-icon-edit"></i>修改</a>
+                                       <a href="javascript:;" onclick="delPartyMember()" class="layui-btn layui-btn-primary" id="delete1"><i class="layui-icon layui-icon-delete"></i>删除</a>
+                               </div>
+                      </div>
+                </div>
+           </div> 
+     </div>
+     <div class="wid_content martop10">
+            <div class="container">
+                  <form class="layui-form" action="">
+                   <ul class="gzsiplenewslist">
+                        <li>
+                            <a href="39.7驻村第一书记--重点工作3--详情.html">
+                               <div class="text-align-right checkedsomelist fl">
+                                  <input type="checkbox" name="" lay-skin="primary">
+                               </div>
+                               <img src="images/djztp_icon19.png">
+                               <div class="mainNewsD" style="width: 980px;">赵志华2018年12.25-1.6日个人工作周报</div>
+                               <div class="dt_datetime">2018-09-23</div>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="39.7驻村第一书记--重点工作3--详情.html">
+                               <div class="text-align-right checkedsomelist fl">
+                                  <input type="checkbox" name="" lay-skin="primary">
+                               </div>
+                               <img src="images/djztp_icon19.png">
+                               <div class="mainNewsD" style="width: 980px;">赵志华2018年12.25-1.6日个人工作周报</div>
+                               <div class="dt_datetime">2018-09-23</div>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="39.7驻村第一书记--重点工作3--详情.html">
+                               <div class="text-align-right checkedsomelist fl">
+                                  <input type="checkbox" name="" lay-skin="primary">
+                               </div>
+                               <img src="images/djztp_icon19.png">
+                               <div class="mainNewsD" style="width: 980px;">赵志华2018年12.25-1.6日个人工作周报</div>
+                               <div class="dt_datetime">2018-09-23</div>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="39.7驻村第一书记--重点工作3--详情.html">
+                               <div class="text-align-right checkedsomelist fl">
+                                  <input type="checkbox" name="" lay-skin="primary">
+                               </div>
+                               <img src="images/djztp_icon19.png">
+                               <div class="mainNewsD" style="width: 980px;">赵志华2018年12.25-1.6日个人工作周报</div>
+                               <div class="dt_datetime">2018-09-23</div>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="39.7驻村第一书记--重点工作3--详情.html">
+                               <div class="text-align-right checkedsomelist fl">
+                                  <input type="checkbox" name="" lay-skin="primary">
+                               </div>
+                               <img src="images/djztp_icon19.png">
+                               <div class="mainNewsD" style="width: 980px;">赵志华2018年12.25-1.6日个人工作周报</div>
+                               <div class="dt_datetime">2018-09-23</div>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="39.7驻村第一书记--重点工作3--详情.html">
+                               <div class="text-align-right checkedsomelist fl">
+                                  <input type="checkbox" name="" lay-skin="primary">
+                               </div>
+                               <img src="images/djztp_icon19.png">
+                               <div class="mainNewsD" style="width: 980px;">赵志华2018年12.25-1.6日个人工作周报</div>
+                               <div class="dt_datetime">2018-09-23</div>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="39.7驻村第一书记--重点工作3--详情.html">
+                               <div class="text-align-right checkedsomelist fl">
+                                  <input type="checkbox" name="" lay-skin="primary">
+                               </div>
+                               <img src="images/djztp_icon19.png">
+                               <div class="mainNewsD" style="width: 980px;">赵志华2018年12.25-1.6日个人工作周报</div>
+                               <div class="dt_datetime">2018-09-23</div>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="39.7驻村第一书记--重点工作3--详情.html">
+                               <div class="text-align-right checkedsomelist fl">
+                                  <input type="checkbox" name="" lay-skin="primary">
+                               </div>
+                               <img src="images/djztp_icon19.png">
+                               <div class="mainNewsD" style="width: 980px;">赵志华2018年12.25-1.6日个人工作周报</div>
+                               <div class="dt_datetime">2018-09-23</div>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="39.7驻村第一书记--重点工作3--详情.html">
+                               <div class="text-align-right checkedsomelist fl">
+                                  <input type="checkbox" name="" lay-skin="primary">
+                               </div>
+                               <img src="images/djztp_icon19.png">
+                               <div class="mainNewsD" style="width: 980px;">赵志华2018年12.25-1.6日个人工作周报</div>
+                               <div class="dt_datetime">2018-09-23</div>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="39.7驻村第一书记--重点工作3--详情.html">
+                               <div class="text-align-right checkedsomelist fl">
+                                  <input type="checkbox" name="" lay-skin="primary">
+                               </div>
+                               <img src="images/djztp_icon19.png">
+                               <div class="mainNewsD" style="width: 980px;">赵志华2018年12.25-1.6日个人工作周报</div>
+                               <div class="dt_datetime">2018-09-23</div>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="39.7驻村第一书记--重点工作3--详情.html">
+                               <div class="text-align-right checkedsomelist fl">
+                                  <input type="checkbox" name="" lay-skin="primary">
+                               </div>
+                               <img src="images/djztp_icon19.png">
+                               <div class="mainNewsD" style="width: 980px;">赵志华2018年12.25-1.6日个人工作周报</div>
+                               <div class="dt_datetime">2018-09-23</div>
+                            </a>
+                        </li>
+                 </ul>
+                 </form>
+            </div>
+     </div>
+    <!--  layui文件上传 -->
+     <script>
+layui.use(['form', 'laydate','upload'], function(){
+          var form = layui.form,upload = layui.upload,laydate = layui.laydate;
+  //日期
+          //日期
+          laydate.render({
+            elem: '#fb_date1'
+          });
+          laydate.render({
+            elem: '#fb_date2'
+          });
+  //普通图片上传
+  //普通图片上传
+  var uploadInst = upload.render({
+    elem: '#imgupload'
+    ,url: '/upload/'
+    ,before: function(obj){
+      //预读本地文件示例，不支持ie8
+      obj.preview(function(index, file, result){
+        $('#imgupload').attr('src', result); //图片链接（base64）
+      });
+    }
+    ,done: function(res){
+      //如果上传失败
+      if(res.code > 0){
+        return layer.msg('上传失败');
+      }
+      //上传成功
+    }
+    ,error: function(){
+      //演示失败状态，并实现重传
+      var demoText = $('#demoText');
+      demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+      demoText.find('.demo-reload').on('click', function(){
+        uploadInst.upload();
+      });
+    }
+  });
+   });
+</script>
+<script type="text/javascript">
+         $(document).ready(function() {
+          /*党员队伍/党组织信息切换*/
+            $(".setBtn").click(function(event) {
+               event.stopPropagation();
+        $(this).children('.zsgc_btns').toggleClass('ng-hide');
+      });
+        $(".setBtn").children('.zsgc_btns').click(function(event) {
+           event.stopPropagation();
+       });
+        $(".checkedsomelist").click(function(event) {
+           return false;
+       });
+         });
+     </script>
+</body>
+</html>

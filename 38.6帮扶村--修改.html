@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>南阳党建大数据平台</title>
+  <meta name="keywords" content="南阳党建大数据平台">
+  <meta name="description" content="南阳党建大数据平台">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="css/nydj_style.css"><!-- 页面主要css文件 -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="layui/layui.js"></script>
+  <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+  <script src="http://192.168.4.54:7301/swdj/res/jpsy/js/regionSelect/js/Popt.js"></script>
+  <script src="http://192.168.4.54:7301/swdj/res/jpsy/js/regionSelect/js/cityJson.js"></script>
+  <script src="http://192.168.4.54:7301/swdj/res/jpsy/js/regionSelect/js/citySet.js"></script>
+  <script type="text/javascript" src="http://192.168.4.54:7301/swdj/res/jpsy/js/regionSelect/js/placeholder.js"></script>
+  <!--   兼容IE9以下的低版本浏览器对于css3的不支持以及对于媒体查询的不支持。 -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]--> 
+</head>
+<body>
+     <div class="wid_content bg_white">
+            <div class="container clearfix top_head">
+               <div class="top_title fl"><img src="images/dh.png" alt="">帮扶工作管理</div>
+               <div class="fr top_right">
+                    <a href="javascript:;" class="top_atoggle">角色切换</a>
+                    <a href="javascript:;" class="top_atoggle">操作说明</a>
+                    <a href="javascript:;" class="top_atoggle">返回首页</a>
+                    <a href="javascript:;" class="top_atoggle">返回上一页</a>
+               </div>
+            </div>
+     </div>
+     <div class="wid_content tp_mart100 bg_white">
+           <div class="wid1">
+               <form class="layui-form" action="">
+                     <div class="clearfix dq_service serW">
+                          <div class="layui-form-item">
+                              <label class="layui-form-label">帮扶村</label>
+                              <div class="layui-input-block">
+                                  <input type="text" name="title" class="layui-input">
+                              </div>
+                          </div>
+                           <div class="layui-form-item">
+                              <label class="layui-form-label">总人数</label>
+                              <div class="layui-input-block">
+                                  <input type="text" name="title" class="layui-input">
+                              </div>
+                          </div>
+                           <div class="layui-form-item">
+                              <label class="layui-form-label">党员人数</label>
+                              <div class="layui-input-block">
+                                  <input type="text" name="title" class="layui-input">
+                              </div>
+                          </div>
+                          <div class="layui-form-item">
+                               <label class="layui-form-label">帮扶村类型</label>
+                               <div class="layui-input-block" style="">
+                                    <select name="" >
+                                         <option value=""></option>
+                                         <option value="0">所属机构1</option>
+                                         <option value="1">所属机构2</option>
+                                     </select>
+                               </div>
+                         </div>
+                           <div class="layui-form-item">
+                              <label class="layui-form-label">贫困人数</label>
+                              <div class="layui-input-block">
+                                  <input type="text" name="title" class="layui-input">
+                              </div>
+                          </div>
+                           <div class="layui-form-item">
+                              <label class="layui-form-label">总户数</label>
+                              <div class="layui-input-block">
+                                  <input type="text" name="title" class="layui-input">
+                              </div>
+                          </div>
+                          <div class="layui-form-item">
+                              <label class="layui-form-label">预脱贫时间</label>
+                              <div class="layui-input-block">
+                                  <input type="text" class="layui-input datesicon" id="fb1_time" >
+                              </div>
+                          </div>
+                          <div class="layui-form-item">
+                              <label class="layui-form-label">贫困户数</label>
+                              <div class="layui-input-block">
+                                  <input type="text" name="title" class="layui-input">
+                              </div>
+                          </div>
+                          <div class="layui-form-item">
+                               <label class="layui-form-label">驻村第一书记</label>
+                               <div class="layui-input-block" style="">
+                                    <select name="" >
+                                         <option value=""></option>
+                                         <option value="0">所属机构1</option>
+                                         <option value="1">所属机构2</option>
+                                     </select>
+                               </div>
+                         </div>
+                         <div class="layui-form-item">
+                               <label class="layui-form-label">驻村工作队</label>
+                               <div class="layui-input-block" style="">
+                                    <select name="" >
+                                         <option value=""></option>
+                                         <option value="0">所属机构1</option>
+                                         <option value="1">所属机构2</option>
+                                     </select>
+                               </div>
+                         </div>
+                          <div class="layui-form-item">
+                               <label class="layui-form-label">位置</label>
+                               <div class="layui-input-block">
+                                    <div class="fieldInputDiv fl">
+                                       <input class="layui-input" type="text" id="partyAddress" readonly="" placeholder="请选择">
+                                         <i></i>
+                                   </div>
+                               </div>
+                         </div>
+                         <div class="layui-form-item">
+                              <label class="layui-form-label" style="font-size:13px;">请输入搜索地图位置</label>
+                              <div class="layui-input-block">
+                                  <input type="text" name="title" class="layui-input">
+                              </div>
+                          </div>
+                          <div class="layui-form-item">
+                              <iframe class="" unselectable="on" name="container" id="container" src="http://lbsyun.baidu.com/jsdemo/demo/a1_2.htm" style="width:100%; height: 370px;"></iframe>
+                          </div>
+                          <div class="text-align-center dw_infoSave">
+                                <button class="layui-btn btn_long bg-gray">返回</button>
+                                <button class="layui-btn btn_long bg-red">保存</button>
+                          </div>
+                     </div>
+               </form>
+           </div>
+     </div>
+    <!--  layui表单js -->
+     <script>
+        layui.use(['form','upload','layedit','laydate','laypage','table','layer'], function(){
+          var form = layui.form,laydate = layui.laydate,laypage = layui.laypage,table = layui.table,layer = layui.layer,layedit = layui.layedit,upload = layui.upload;
+          //日期
+          laydate.render({
+            elem: '#fb1_time'
+          });
+           //普通图片上传
+  var uploadInst = upload.render({
+    elem: '#uploadimg'
+    ,url: '/upload/'
+    ,before: function(obj){
+      //预读本地文件示例，不支持ie8
+      obj.preview(function(index, file, result){
+        $('#demo1').attr('src', result); //图片链接（base64）
+         $('.addpictext').hide();
+         $("#uploadimg .layui-upload-list img").css({"width":350,"height":200})
+      });
+    }
+    ,done: function(res){
+      //如果上传失败
+      if(res.code > 0){
+        return layer.msg('上传失败');
+      }
+      //上传成功
+    }
+    ,error: function(){
+      //演示失败状态，并实现重传
+      var demoText = $('#demoText');
+      demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+      demoText.find('.demo-reload').on('click', function(){
+        uploadInst.upload();
+      });
+    }
+  });
+  /*上传文件*/
+  //指定允许上传的文件类型
+  upload.render({
+    elem: '#uploadtest3'
+    ,url: '/upload/'
+    ,accept: 'file' //普通文件
+    ,done: function(res){
+      console.log(res)
+    }
+  });
+  /*文本编辑器*/
+   layedit.build('editText', {
+  tool: [
+  'strong' //加粗
+  ,'italic' //斜体
+  ,'underline' //下划线
+  ,'del' //删除线
+  
+  ,'|' //分割线
+  
+  ,'left' //左对齐
+  ,'center' //居中对齐
+  ,'right' //右对齐
+  ,'link' //超链接
+  ,'unlink' //清除链接
+  ,'face' //表情
+  ,'image' //插入图片
+]
+});
+        });
+      </script>
+     <!-- 党员队伍党组织信息效果 -->
+     <script type="text/javascript">
+         $(document).ready(function() {
+          /*党员队伍/党组织信息切换*/
+          $(".togglenav>div").click(function(event) {
+            $(this).addClass('active').siblings('').removeClass('active');
+            $(".party_form_con li").eq($(this).index()).removeClass('ng-hide').siblings('').addClass('ng-hide');
+          });
+          /*党员队伍高级查询点击小三角变化*/
+            $(".advanced_query1").click(function(event) {
+                $(this).children('img').toggleClass('arrowd');
+                $(".p_memeber .hidden_div").toggleClass("ng-hide");
+                if ($(".p_memeber .hidden_div").hasClass('ng-hide')) {
+                  $("#nor_tg1").parent().css({"marginTop":20});
+                }else{
+                  $("#nor_tg1").parent().css({"marginTop":-52});
+                }
+            });
+            /*传统列表之间切换*/
+            $("#nor_tg1").click(function(event) {
+              $(this).toggleClass('nor_now_toggle_a');
+              $(this).parents("li").children('.party_member_lsit').toggleClass('ng-hide');
+            });
+            /*党组织信息高级查询点击小三角变化*/
+            $(".advanced_query2").click(function(event) {
+                $(this).children('img').toggleClass('arrowd');
+                $(".p_organ_info .hidden_div").toggleClass("ng-hide");
+                if ($(".p_organ_info .hidden_div").hasClass('ng-hide')) {
+                  $("#nor_tg2").parent().css({"marginTop":20});
+                }else{
+                  $("#nor_tg2").parent().css({"marginTop":-52});
+                }
+            });
+            /*党组织信息传统列表之间切换*/
+            $("#nor_tg2").click(function(event) {
+              $(this).toggleClass('nor_now_toggle_a');
+              $(this).parents("li").children('.party_organize_list').toggleClass('ng-hide');
+            });
+
+            $(".setBtn").click(function(event) {
+               event.stopPropagation();
+        $(this).children('.zsgc_btns').toggleClass('ng-hide');
+      });
+        $(".setBtn").children('.zsgc_btns').click(function(event) {
+           event.stopPropagation();
+       });
+        $("#partyAddress").click(function (e) {
+    SelCity(this,e);
+  });
+         });
+     </script>
+</body>
+</html>

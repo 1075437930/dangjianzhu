@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>南阳党建大数据平台</title>
+  <meta name="keywords" content="南阳党建大数据平台">
+  <meta name="description" content="南阳党建大数据平台">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="css/nydj_style.css"><!-- 页面主要css文件 -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="layui/layui.js"></script>
+  <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <!--   兼容IE9以下的低版本浏览器对于css3的不支持以及对于媒体查询的不支持。 -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]--> 
+</head>
+<body>
+     <div class="wid_content bg_white">
+            <div class="container clearfix top_head">
+               <div class="top_title fl"><img src="images/dh.png" alt="">驻村第一书记</div>
+               <div class="fr top_right">
+                    <a href="javascript:;" class="top_atoggle">角色切换</a>
+                    <a href="javascript:;" class="top_atoggle">操作说明</a>
+                    <a href="javascript:;" class="top_atoggle">返回首页</a>
+                    <a href="javascript:;" class="top_atoggle">返回上一页</a>
+               </div>
+            </div>
+     </div>
+     <div class="wid_content martop10 bg_white">
+            <div class="clearfix">
+                <div class="threeDivTog tp_mart100">
+                     <div class="ac_dehxqd">
+                           <div class="wid1">
+                                 <form class="layui-form" action="">
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">支出金额</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="title" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                          <label class="layui-form-label">支出日期</label>
+                                          <div class="layui-input-block">
+                                              <input type="text" class="layui-input datesicon" placeholder="请选择" id="time_date">
+                                          </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">详情</label>
+                                        <div class="layui-input-block">
+                                            <textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                          <label class="layui-form-label">图片</label>
+                                          <div class="layui-input-block">
+                                                <div class="addPfiled1">
+                                                      <div class="layui-upload clearfix">
+                                                              <div class="upedlistSmall layui-col-space28" id="puedpics">
+                                                                    <div class="imgloadb">
+                                                                          <div class="layui-upload imgupload3">
+                                                                              <button type="button" class="layui-btn" id="morepics"></button>
+                                                                               <input class="layui-upload-file" type="file" accept="undefined" name="file">
+                                                                              <img src="images/adds.png" alt="">
+                                                                           </div>
+                                                                    </div>
+                                                              </div>
+                                                      </div>
+                                                 </div>
+                                          </div>
+                                    </div>
+                                     <div class="text-align-center dw_infoSave" style="width: 1000px;">
+                                            <button class="layui-btn btn_long layui-btn-primary">返回</button>
+                                            <button class="layui-btn btn_long bg-red">提交</button>
+                                     </div>
+                               </form>
+                           </div>
+                     </div>
+                </div>
+            </div>
+     </div>
+   <!--  layui文件上传 -->
+     <script>
+layui.use(['form','upload','layedit','laydate','laypage','table','layer'], function(){
+          var form = layui.form,laydate = layui.laydate,laypage = layui.laypage,table = layui.table,layer = layui.layer,layedit = layui.layedit,upload = layui.upload;
+          //日期
+          laydate.render({
+            elem: '#time_date'
+          });
+          laydate.render({
+            elem: '#fb_date2'
+          });
+  //多图片上传
+  upload.render({
+    elem: '#morepics'
+    ,url: '/upload/'
+    ,multiple: true
+    ,before: function(obj){
+      //预读本地文件示例，不支持ie8
+      obj.preview(function(index, file, result){
+        $('.imgloadb').before('<div class="upedimg"><img src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img"><img src="images/deleteBtn.png" alt="" class="deletePicSmall" /></div>')
+      });
+    }
+    ,done: function(res){
+      //上传完毕
+
+    }
+  });
+//指定允许上传的文件类型
+  upload.render({
+    elem: '#uploadtest3'
+    ,url: '/upload/'
+    ,accept: 'file' //普通文件
+    ,done: function(res){
+      console.log(res)
+    }
+  });
+   /*文本编辑器*/
+   layedit.build('editText', {
+  tool: [
+  'strong' //加粗
+  ,'italic' //斜体
+  ,'underline' //下划线
+  ,'del' //删除线
+  
+  ,'|' //分割线
+  
+  ,'left' //左对齐
+  ,'center' //居中对齐
+  ,'right' //右对齐
+  ,'link' //超链接
+  ,'unlink' //清除链接
+  ,'face' //表情
+  ,'image' //插入图片
+]
+});
+   });
+</script>
+<script type="text/javascript" >
+$(document).ready(function() {
+/*删除图片*/
+  $(document).on('click', '.deletePicSmall', function(event) {
+    $(this).parent(".upedimg").remove();
+  });
+});
+</script>
+</body>
+</html>

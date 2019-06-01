@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>南阳党建大数据平台</title>
+  <meta name="keywords" content="南阳党建大数据平台">
+  <meta name="description" content="南阳党建大数据平台">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="css/nydj_style.css"><!-- 页面主要css文件 -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="layui/layui.js"></script>
+  <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+  <script src="http://192.168.4.54:7301/swdj/res/jpsy/js/regionSelect/js/Popt.js"></script>
+  <script src="http://192.168.4.54:7301/swdj/res/jpsy/js/regionSelect/js/cityJson.js"></script>
+  <script src="http://192.168.4.54:7301/swdj/res/jpsy/js/regionSelect/js/citySet.js"></script>
+  <script type="text/javascript" src="http://192.168.4.54:7301/swdj/res/jpsy/js/regionSelect/js/placeholder.js"></script>
+  <!--   兼容IE9以下的低版本浏览器对于css3的不支持以及对于媒体查询的不支持。 -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]--> 
+</head>
+<body>
+     <div class="wid_content bg_white">
+            <div class="container clearfix top_head">
+               <div class="top_title fl"><img src="images/dh.png" alt="">万名干部助脱贫</div>
+               <div class="fr top_right">
+                    <a href="javascript:;" class="top_atoggle">角色切换</a>
+                    <a href="javascript:;" class="top_atoggle">操作说明</a>
+                    <a href="javascript:;" class="top_atoggle">返回首页</a>
+                    <a href="javascript:;" class="top_atoggle">返回上一页</a>
+               </div>
+            </div>
+     </div>
+     <div class="wid_content dj_mart100 bg_white">
+            <div class="container">
+                 <form class="layui-form" action="">
+                       <div class="clearfix dyxximport">
+                             <div class="layui-upload imgupload" style="top: 10px;">
+                                    <button type="button" class="layui-btn" id="imgupload"></button>
+                                    <img src="images/inpic.png" alt="">
+                                    <p>点击上传图片</p>
+                              </div> 
+                             <div class="layui-col-xs5" style="height:371px">
+                                  <div class="layui-form-item">
+                                      <label class="layui-form-label">姓名</label>
+                                      <div class="layui-input-block" style="width: 230px;">
+                                          <input type="text" name="title" placeholder="请输入姓名" class="layui-input">
+                                      </div>
+                                  </div>
+                                  <div class="layui-form-item">
+                                      <label class="layui-form-label">派出单位</label>
+                                      <div class="layui-input-block"  style="width: 230px;">
+                                          <input type="text" name="title" placeholder="请输入派出单位" class="layui-input">
+                                      </div>
+                                  </div>
+                                  <div class="layui-form-item">
+                                      <label class="layui-form-label">职务</label>
+                                      <div class="layui-input-block" style="width: 230px;">
+                                          <input type="text" name="title" placeholder="请输入职务" class="layui-input">
+                                      </div>
+                                  </div>
+                                  <div class="layui-form-item">
+                                          <label class="layui-form-label">帮扶村</label>
+                                          <div class="layui-input-block">
+                                               <div class="fieldInputDiv fl">
+                                                   <input class="layui-input" type="text" id="partyAddress" readonly="" placeholder="请选择">
+                                                     <i></i>
+                                               </div>
+                                          </div>
+                                   </div>
+                             </div>
+                             <div class="layui-col-xs1" style="height:371px"></div>
+                             <div class="layui-col-xs6" style="height:371px">
+                                    <div class="layui-form-item">
+                                      <label class="layui-form-label">联系电话</label>
+                                      <div class="layui-input-block">
+                                          <input type="text" name="title" placeholder="请输入手机号" class="layui-input">
+                                      </div>
+                                   </div>
+                                    <div class="layui-form-item">
+                                          <label class="layui-form-label">性别</label>
+                                          <div class="layui-input-block">
+                                               <select name="" >
+                                                    <option value="">请选择</option>
+                                                    <option value="0">男</option>
+                                                    <option value="1">女</option>
+                                                </select>
+                                          </div>
+                                   </div>
+                             </div>
+                             <div class="text-align-center dw_infoSave">
+                                    <button class="layui-btn btn_long bg-gray">返回</button>
+                                    <button class="layui-btn btn_long bg-red">保存</button>
+                              </div>
+                       </div>
+                 </form>
+            </div>
+     </div>
+    <!--  layui文件上传 -->
+     <script>
+layui.use(['form', 'laydate','upload'], function(){
+          var form = layui.form,upload = layui.upload,laydate = layui.laydate;
+  //日期
+          laydate.render({
+            elem: '#birthday_date'
+          });
+          laydate.render({
+            elem: '#joinparty_date1'
+          });
+          laydate.render({
+            elem: '#joinparty_date2'
+          });
+          laydate.render({
+            elem: '#bememeber_date'
+          });
+  //普通图片上传
+  //普通图片上传
+  var uploadInst = upload.render({
+    elem: '#imgupload'
+    ,url: '/upload/'
+    ,before: function(obj){
+      //预读本地文件示例，不支持ie8
+      obj.preview(function(index, file, result){
+        $('#imgupload').attr('src', result); //图片链接（base64）
+      });
+    }
+    ,done: function(res){
+      //如果上传失败
+      if(res.code > 0){
+        return layer.msg('上传失败');
+      }
+      //上传成功
+    }
+    ,error: function(){
+      //演示失败状态，并实现重传
+      var demoText = $('#demoText');
+      demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+      demoText.find('.demo-reload').on('click', function(){
+        uploadInst.upload();
+      });
+    }
+  });
+   });
+</script>
+<script type="text/javascript">
+$("#partyAddress").click(function (e) {
+    SelCity(this,e);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>南阳党建大数据平台</title>
+  <meta name="keywords" content="南阳党建大数据平台">
+  <meta name="description" content="南阳党建大数据平台">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="css/nydj_style.css"><!-- 页面主要css文件 -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="layui/layui.js"></script>
+  <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <!--   兼容IE9以下的低版本浏览器对于css3的不支持以及对于媒体查询的不支持。 -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]--> 
+</head>
+<body>
+     <div class="wid_content bg_white">
+            <div class="container clearfix top_head">
+               <div class="top_title fl"><img src="images/dh.png" alt="">政策文件</div>
+               <div class="fr top_right">
+                    <a href="javascript:;" class="top_atoggle">角色切换</a>
+                    <a href="javascript:;" class="top_atoggle">操作说明</a>
+                    <a href="javascript:;" class="top_atoggle">返回首页</a>
+                    <a href="javascript:;" class="top_atoggle">返回上一页</a>
+               </div>
+            </div>
+     </div>
+     <div class="banner">
+            <div id="slideBox" class="slideBox">
+                  <div class="hd">
+                    <ul><li>1</li><li>2</li><li>3</li></ul>
+                  </div>
+                  <div class="bd">
+                    <ul>
+                      <li><a href="http://www.SuperSlide2.com" target="_blank"><img src="images/banner10.jpg" /></a></li>
+                      <li><a href="http://www.SuperSlide2.com" target="_blank"><img src="images/banner11.jpg" /></a></li>
+                      <li><a href="http://www.SuperSlide2.com" target="_blank"><img src="images/banner12.jpg" /></a></li>
+                    </ul>
+                  </div>
+            </div>
+            <script type="text/javascript">
+                jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
+            </script>
+     </div>
+     <div class="wid_content martop10">
+            <div class="container">
+                  <form class="layui-form">
+                        <div class="layui-row clearfix" style="padding: 20px 0;">
+                            <div class="layui-col-xs6">
+                                  <div class="layui-form-item">
+                                        <input type="text" class="layui-input serchpad fl" id="queryField" name="queryField" placeholder="请输入" style="width:83%;">
+                                      <button class="layui-btn bg-red fl" type="button" onclick="query()"><i class="layui-icon layui-icon-search" style="font-size: 24px; color: #fff;"></i>搜索</button>
+                                  </div>
+                            </div>
+                            <div class="layui-col-xs6">
+                                  <div class="togglenav text-align-right dtsetbtns">
+                                       <div class="setBtn">
+                                                 <img src="images/gl.png" alt="">
+                                                 <div class="layui-inline zsgc_btns ng-hide">
+                                                   <a href="36.2政策文件--添加.html" onclick="addPartyMember()" class="layui-btn layui-btn-primary"><i class="layui-icon layui-icon-add-1"></i>添加</a>
+                                                    <a href="36.3政策文件--修改.html" onclick="updatePartyMember()" class="layui-btn layui-btn-primary"><i class="layui-icon layui-icon-edit"></i>修改</a>
+                                                    <a href="javascript:;" onclick="delPartyMember()" class="layui-btn layui-btn-primary" id="delete1"><i class="layui-icon layui-icon-delete"></i>删除</a>
+                                                </div>
+                                       </div>
+                                </div>
+                            </div>
+                      </div>
+                  </form>
+            </div>
+     </div>
+     <div class="container" style="margin-top:40px;">
+                 <div class="event_publish_list">
+                       <div class="clearfix layui-col-space30">
+                             <div class="organize_div">
+                                 <div class="organize_list">
+                                       <div class="zsgc_chose"></div>
+                                       <div class="organ_pic acpic"><a href="37.4主题活动--我扶贫详情.html"><img src="https://jx.cdn.qhstatic.com/cimg.png?size=258x112&amp;tid=1728&amp;aid=431756&amp;timg=https%3A%2F%2Fp17.ssl.qhimgs3.com%2Fdr%2F240_240_%2Ft01305020fac830d223.jpg%3Ft%3D1536704548&amp;ver=1543581012&amp;item=-3164226971223829044%2C-1467865292220870857%2C1703779991015894340" alt=""></a></div>
+                                        <div class="activityinfo">
+                                             <h2>文件资料111文件资料111文件资料111文件资料111文件资料111文件资料111</h2>
+                                        </div>
+                                 </div>
+                             </div>
+                             <div class="organize_div">
+                                 <div class="organize_list">
+                                       <div class="zsgc_chose"></div>
+                                       <div class="organ_pic acpic"><a href="37.4主题活动--我扶贫详情.html"><img src="https://jx.cdn.qhstatic.com/cimg.png?size=258x112&amp;tid=1728&amp;aid=431756&amp;timg=https%3A%2F%2Fp17.ssl.qhimgs3.com%2Fdr%2F240_240_%2Ft01305020fac830d223.jpg%3Ft%3D1536704548&amp;ver=1543581012&amp;item=-3164226971223829044%2C-1467865292220870857%2C1703779991015894340" alt=""></a></div>
+                                        <div class="activityinfo">
+                                             <h2>文件资料111文件资料111文件资料111文件资料111文件资料111文件资料111</h2>
+                                        </div>
+                                 </div>
+                             </div>
+                             <div class="organize_div">
+                                 <div class="organize_list">
+                                       <div class="zsgc_chose"></div>
+                                       <div class="organ_pic acpic"><a href="37.4主题活动--我扶贫详情.html"><img src="https://jx.cdn.qhstatic.com/cimg.png?size=258x112&amp;tid=1728&amp;aid=431756&amp;timg=https%3A%2F%2Fp17.ssl.qhimgs3.com%2Fdr%2F240_240_%2Ft01305020fac830d223.jpg%3Ft%3D1536704548&amp;ver=1543581012&amp;item=-3164226971223829044%2C-1467865292220870857%2C1703779991015894340" alt=""></a></div>
+                                        <div class="activityinfo">
+                                             <h2>文件资料111文件资料111文件资料111文件资料111文件资料111文件资料111</h2>
+                                        </div>
+                                 </div>
+                             </div>
+                             <div class="organize_div">
+                                 <div class="organize_list">
+                                       <div class="zsgc_chose"></div>
+                                       <div class="organ_pic acpic"><a href="37.4主题活动--我扶贫详情.html"><img src="https://jx.cdn.qhstatic.com/cimg.png?size=258x112&amp;tid=1728&amp;aid=431756&amp;timg=https%3A%2F%2Fp17.ssl.qhimgs3.com%2Fdr%2F240_240_%2Ft01305020fac830d223.jpg%3Ft%3D1536704548&amp;ver=1543581012&amp;item=-3164226971223829044%2C-1467865292220870857%2C1703779991015894340" alt=""></a></div>
+                                        <div class="activityinfo">
+                                             <h2>文件资料111文件资料111文件资料111文件资料111文件资料111文件资料111</h2>
+                                        </div>
+                                 </div>
+                             </div>
+                             <div class="organize_div">
+                                 <div class="organize_list">
+                                       <div class="zsgc_chose"></div>
+                                       <div class="organ_pic acpic"><a href="37.4主题活动--我扶贫详情.html"><img src="https://jx.cdn.qhstatic.com/cimg.png?size=258x112&amp;tid=1728&amp;aid=431756&amp;timg=https%3A%2F%2Fp17.ssl.qhimgs3.com%2Fdr%2F240_240_%2Ft01305020fac830d223.jpg%3Ft%3D1536704548&amp;ver=1543581012&amp;item=-3164226971223829044%2C-1467865292220870857%2C1703779991015894340" alt=""></a></div>
+                                        <div class="activityinfo">
+                                             <h2>文件资料111文件资料111文件资料111文件资料111文件资料111文件资料111</h2>
+                                        </div>
+                                 </div>
+                             </div>
+                             <div class="organize_div">
+                                 <div class="organize_list">
+                                       <div class="zsgc_chose"></div>
+                                       <div class="organ_pic acpic"><a href="37.4主题活动--我扶贫详情.html"><img src="https://jx.cdn.qhstatic.com/cimg.png?size=258x112&amp;tid=1728&amp;aid=431756&amp;timg=https%3A%2F%2Fp17.ssl.qhimgs3.com%2Fdr%2F240_240_%2Ft01305020fac830d223.jpg%3Ft%3D1536704548&amp;ver=1543581012&amp;item=-3164226971223829044%2C-1467865292220870857%2C1703779991015894340" alt=""></a></div>
+                                        <div class="activityinfo">
+                                             <h2>文件资料111文件资料111文件资料111文件资料111文件资料111文件资料111</h2>
+                                        </div>
+                                 </div>
+                             </div>
+                       </div>
+                       <div class="pagenations">
+                             <div id="pages" class="pages_fy"></div>
+                       </div>
+                 </div>
+           </div>
+     <script>
+        layui.use(['form', 'laydate','laypage','table','layer'], function(){
+          var form = layui.form,laydate = layui.laydate,laypage = layui.laypage,table = layui.table,layer = layui.layer;
+        });
+      </script>
+     <!-- 党员队伍党组织信息效果 -->
+     <script type="text/javascript">
+         $(document).ready(function() {
+          /*党员队伍/党组织信息切换*/
+            $(".setBtn").click(function(event) {
+               event.stopPropagation();
+        $(this).children('.zsgc_btns').toggleClass('ng-hide');
+      });
+        $(".setBtn").children('.zsgc_btns').click(function(event) {
+           event.stopPropagation();
+       });
+         });
+     </script>
+</body>
+</html>

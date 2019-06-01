@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>南阳党建大数据平台</title>
+  <meta name="keywords" content="南阳党建大数据平台">
+  <meta name="description" content="南阳党建大数据平台">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="css/nydj_style.css"><!-- 页面主要css文件 -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="layui/layui.js"></script>
+  <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <!--   兼容IE9以下的低版本浏览器对于css3的不支持以及对于媒体查询的不支持。 -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]--> 
+</head>
+<body>
+     <div class="wid_content bg_white">
+            <div class="container clearfix top_head">
+               <div class="top_title fl" style="font-size:43px;"><img src="images/dh.png" alt="">政策培训</div>
+               <div class="fr top_right">
+                    <a href="javascript:;" class="top_atoggle">角色切换</a>
+                    <a href="javascript:;" class="top_atoggle">操作说明</a>
+                    <a href="javascript:;" class="top_atoggle">返回首页</a>
+                    <a href="javascript:;" class="top_atoggle">返回上一页</a>
+               </div>
+            </div>
+     </div>
+     <div class="wid_content dj_mart100">
+            <div class="container">
+                   <div class="velli_details clearfix">
+                         <div class="layui-col-xs2 lefttitle">主题：</div>
+                         <div class="layui-col-xs10">南阳党委组织11111</div>
+                  </div>
+                  <div class="velli_details clearfix">
+                         <div class="layui-col-xs2 lefttitle">举办单位：</div>
+                         <div class="layui-col-xs10">南阳党委组织</div>
+                  </div>
+                  <div class="velli_details clearfix">
+                         <div class="layui-col-xs2 lefttitle">联系电话：</div>
+                         <div class="layui-col-xs10">0377-60253022</div>
+                  </div>
+                  <div class="velli_details clearfix">
+                         <div class="layui-col-xs2 lefttitle">培训时间：</div>
+                         <div class="layui-col-xs10">2019-03-01</div>
+                  </div>
+                  <div class="velli_details clearfix">
+                         <div class="layui-col-xs2 lefttitle">参与人员：</div>
+                         <div class="layui-col-xs10">王梦  张露露</div>
+                  </div>
+                  <div class="velli_details clearfix">
+                         <div class="layui-col-xs2 lefttitle">培训内容：</div>
+                         <div class="layui-col-xs10">
+                                <div class="p-detail">
+                                     <p class="MsoNormal"><span>&nbsp; &nbsp; &nbsp; &nbsp; 机关事业单位党组织８９２０个，其中党委４５１个，党总支５８５个，党支部７８８４个，党员１２７３１８名。企业党组织３８６６个，党员７２６８５名，其中公有制企业党组织２３９３个（党委１０６个，党总支１４６个，党支部２１４１个），党员５４１８３名；非公有制企业党组织１４７３个（党委６６个，党总支６６个，党支部１３４１个），党员１８５０２名。乡镇街道党组织５１９６个，其中乡镇党委２０４个，街道党工委３９个，建制村党组织４５４２个，社区党组织４１１个（城市社区２９８个，乡镇社区１１３个），农民党员２１６０２２名，社区党员２４９１９名。社会组织党组织１９２个，其中党委５个，党支部１８７个，党员１５５５名。其他类型党组织３８０个，其中党委１３个，党总支２８个，党支部３３９个，党员２０５４０名。</span></p>
+                                </div>
+                         </div>
+                  </div>
+                  <div class="velli_details clearfix">
+                         <div class="layui-col-xs2 lefttitle">培训地点：</div>
+                         <div class="layui-col-xs10">市委办公室</div>
+                  </div>
+            </div>
+     </div>
+     <!--  layui表单js -->
+     <script>
+        layui.use(['form', 'laydate','laypage','table','layer','upload',], function(){
+          var form = layui.form,laydate = layui.laydate,laypage = layui.laypage,table = layui.table,layer = layui.layer,upload = layui.upload;
+           /*党员信息分页*/
+            laypage.render({
+              elem: 'pages'
+              ,count: 100
+              ,layout: ['count', 'prev', 'page', 'next']
+              ,theme:'#eb2d18'
+            });
+            /*党员组织分页*/
+            laypage.render({
+              elem: 'pages1'
+              ,count: 100
+              ,layout: ['count', 'prev', 'page', 'next']
+              ,theme:'#eb2d18'
+            });
+          /*党员表格*/
+          table.render({
+              elem: '#table_test'
+              ,url:'test.php'
+              ,cols: [[{field:'id', width:150, title: '序号'}
+                ,{field:'username', title: '姓名'}
+                ,{field:'sex', title: '身份证类型'}
+                ,{field:'city',  title: '派驻村'}
+              ]]
+              ,page:{theme: '#c00'}
+            });
+          /*党组织表格*/
+          table.render({
+              elem: '#tableOrgan_test'
+              ,url:'test.php'
+              ,cols: [[
+                {type:'radio'}
+                ,{field:'id', width:100, title: '序号'}
+                ,{field:'username', width:280, title: '党组织名称'}
+                ,{field:'sex', width:120, title: '党组织书记'}
+                ,{field:'city', width:140, title: '联系电话'}
+                ,{field:'sign', width:140,title: '党组织类别'}
+                ,{field:'experience', width:120, title: '成立时间'}
+                ,{field:'score', title: '党组织属性'}
+              ]]
+              ,page:{theme: '#c00'}
+            });
+          //指定允许上传的文件类型
+  upload.render({
+    elem: '#uploadtest3'
+    ,url: '/upload/'
+    ,accept: 'file' //普通文件
+    ,done: function(res){
+      console.log(res)
+    }
+  });
+        });
+      </script>
+</body>
+</html>

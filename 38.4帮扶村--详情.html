@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>南阳党建大数据平台</title>
+  <meta name="keywords" content="南阳党建大数据平台">
+  <meta name="description" content="南阳党建大数据平台">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="css/nydj_style.css"><!-- 页面主要css文件 -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="layui/layui.js"></script>
+  <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <!--   兼容IE9以下的低版本浏览器对于css3的不支持以及对于媒体查询的不支持。 -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]--> 
+</head>
+<body>
+     <div class="wid_content bg_white">
+            <div class="container clearfix top_head">
+               <div class="top_title fl"><img src="images/dh.png" alt="">帮扶工作管理</div>
+               <div class="fr top_right">
+                    <a href="javascript:;" class="top_atoggle">角色切换</a>
+                    <a href="javascript:;" class="top_atoggle">操作说明</a>
+                    <a href="javascript:;" class="top_atoggle">返回首页</a>
+                    <a href="javascript:;" class="top_atoggle">返回上一页</a>
+               </div>
+            </div>
+     </div>
+     <div class="con_outer">
+            <ul class="djtp_ul djtp_ul_w clearfix layui_zd-col-space52">
+                    <li class="fcshow_active">
+                        <a href="javascrpit:;">
+                              <img src="images/djztp_icon15.png" alt="">
+                              <p>帮扶村</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="stsgn2.html">
+                              <img src="images/djztp_icon11.png" alt="">
+                              <p>驻村第一书记</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="stsgn5.html">
+                              <img src="images/djztp_icon12.png" alt="">
+                              <p>驻村工作队</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascrpit:;">
+                              <img src="images/djztp_icon13.png" alt="">
+                              <p>万名干部助脱贫</p>
+                        </a>
+                    </li>
+              </ul>
+      </div>
+     <div class="wid_content">
+           <div class="container">
+                  <table class="tbform_veInfo">
+                      <tbody>
+                            <tr>
+                                <td class="tbfm_td1" width="5%"><span>帮扶村</span>：</td>
+                                <td width="20%">前高庙村</td>
+                                <td class="tbfm_td1 colorB" width="5%"><span>总人数</span>：</td>
+                                <td width="20%">1111</td>
+                            </tr>
+                            <tr>
+                                <td class="tbfm_td1" width="5%"><span>联系电话</span>：</td>
+                                <td width="20%">15911324367</td>
+                                <td class="tbfm_td1 colorB" width="5%"><span>党员人数</span>：</td>
+                                <td width="20%">679</td>
+                            </tr>
+                             <tr>
+                                <td class="tbfm_td1" width="5%"><span>帮扶村类型</span>：</td>
+                                <td width="20%">软弱涣散村</td>
+                                <td class="tbfm_td1 colorB" width="5%"><span>贫困人数</span>：</td>
+                                <td width="20%">353</td>
+                            </tr>
+                             <tr>
+                                <td class="tbfm_td1" width="5%"><span>脱贫时间</span>：</td>
+                                <td width="20%">2018-12-21</td>
+                                <td class="tbfm_td1 colorB" width="5%"><span>总户数</span>：</td>
+                                <td width="20%">353</td>
+                            </tr>
+                             <tr>
+                                <td class="tbfm_td1" width="5%"><span>位置</span>：</td>
+                                <td width="20%">河南省南阳市宛城区上港乡前高庙村</td>
+                                <td class="tbfm_td1 colorB" width="5%"><span>贫困户数量</span>：</td>
+                                <td width="20%">139</td>
+                            </tr>
+                      </tbody>
+                </table>
+            </div>
+     </div>
+     <div class="wid_content martop10">
+           <div class="container">
+                 <div class="borderDashed"></div>
+                 <div class="togglenav text-align-right" style="border:0;">
+                       <div class="setBtn"style="padding:0;">
+                                 <img src="images/gl.png" alt="">
+                                 <div class="layui-inline zsgc_btns ng-hide">
+                                       <a href="javascript:;"id="addPartyMember" class="layui-btn layui-btn-primary"><i class="layui-icon layui-icon-add-1"></i>添加</a>
+                                        <a href="javascript:;" id="editPartyMember" class="layui-btn layui-btn-primary"><i class="layui-icon layui-icon-edit"></i>修改</a>
+                                        <a href="javascript:;" onclick="delPartyMember()" class="layui-btn layui-btn-primary" id="delete1"><i class="layui-icon layui-icon-delete"></i>删除</a>
+                                </div>
+                       </div>
+                 </div>
+                 <div class="bfvelltaTitle">两委班子</div>
+                 <div class="party_member_lsit traditional_form">
+                       <table class="layui-hide party_table" id="table_test"></table>
+                 </div>
+           </div>
+     </div>
+     <!-- 两委班子信息添加 -->
+     <div class="layui-row" id="popUpdateTest" style="display:none;">
+            <form class="layui-form">
+                <div class="layui-form-item dfjnMonth">
+                   <label class="layui-form-label">姓名：</label><div class="layui-input-block"><input type="text" name="title" class="layui-input"></div>
+                </div>
+                <div class="layui-form-item dfjnMonth" >
+                   <label class="layui-form-label">职位：</label><div class="layui-input-block"><input type="text" name="title" class="layui-input"></div>
+                </div>
+                <div class="layui-form-item dfjnMonth" >
+                   <label class="layui-form-label">联系电话：</label><div class="layui-input-block"><input type="text" name="title" class="layui-input"></div>
+                </div>
+            </form>
+     </div>
+     <!-- 两委班子信息修改 -->
+     <div class="layui-row" id="popUpdateTest1" style="display:none;">
+            <form class="layui-form">
+                <div class="layui-form-item dfjnMonth">
+                   <label class="layui-form-label">姓名：</label><div class="layui-input-block"><input type="text" name="title" class="layui-input"></div>
+                </div>
+                <div class="layui-form-item dfjnMonth" >
+                   <label class="layui-form-label">职位：</label><div class="layui-input-block"><input type="text" name="title" class="layui-input"></div>
+                </div>
+                <div class="layui-form-item dfjnMonth" >
+                   <label class="layui-form-label">联系电话：</label><div class="layui-input-block"><input type="text" name="title" class="layui-input"></div>
+                </div>
+            </form>
+     </div>
+    <!--  layui表单js -->
+     <script>
+        layui.use(['form', 'laydate','laypage','table','layer'], function(){
+          var form = layui.form,laydate = layui.laydate,laypage = layui.laypage,table = layui.table,layer = layui.layer;
+           /*党员信息分页*/
+            laypage.render({
+              elem: 'pages'
+              ,count: 100
+              ,layout: ['count', 'prev', 'page', 'next']
+              ,theme:'#eb2d18'
+            });
+            /*党员组织分页*/
+            laypage.render({
+              elem: 'pages1'
+              ,count: 100
+              ,layout: ['count', 'prev', 'page', 'next']
+              ,theme:'#eb2d18'
+            });
+          /*党组织表格*/
+          table.render({
+              elem: '#table_test'
+              ,url:'test.php'
+              ,cols: [[{field:'id',title: '姓名'}
+                ,{field:'username', title: '职务'}
+                ,{field:'sex',title: '联系方式'}
+              ]]
+              ,page:{theme: '#c00'}
+            });
+          /*弹出层*/
+         /*弹出添加两委班子页面*/
+          $("#addPartyMember").click(function(event) {
+              layer.open({
+                        btn: ['返回','提交'],
+                        skin: 'layui-ext-myskin',
+                        type: 1,
+                        area: '700px',
+                        btnAlign: 'c',
+                        shadeClose: true, //点击遮罩关闭
+                        title:"添加两委班子成员信息",
+                        content:$("#popUpdateTest").html()
+                    });
+          });
+          /*弹出修改两委班子页面*/
+          $("#editPartyMember").click(function(event) {
+              layer.open({
+                        btn: ['返回','保存'],
+                        skin: 'layui-ext-myskin',
+                        type: 1,
+                        area: '700px',
+                        btnAlign: 'c',
+                        shadeClose: true, //点击遮罩关闭
+                        title:"修改两委班子成员信息",
+                        content:$("#popUpdateTest1").html()
+                    });
+          });
+        });
+      </script>
+     <!-- 党员队伍党组织信息效果 -->
+     <script type="text/javascript">
+         $(document).ready(function() {
+          /*党员队伍/党组织信息切换*/
+          $(".togglenav>div").click(function(event) {
+            $(this).addClass('active').siblings('').removeClass('active');
+            $(".party_form_con li").eq($(this).index()).removeClass('ng-hide').siblings('').addClass('ng-hide');
+          });
+          /*党员队伍高级查询点击小三角变化*/
+            $(".advanced_query1").click(function(event) {
+                $(this).children('img').toggleClass('arrowd');
+                $(".p_memeber .hidden_div").toggleClass("ng-hide");
+                if ($(".p_memeber .hidden_div").hasClass('ng-hide')) {
+                  $("#nor_tg1").parent().css({"marginTop":20});
+                }else{
+                  $("#nor_tg1").parent().css({"marginTop":-52});
+                }
+            });
+            /*传统列表之间切换*/
+            $("#nor_tg1").click(function(event) {
+              $(this).toggleClass('nor_now_toggle_a');
+              $(this).parents("li").children('.party_member_lsit').toggleClass('ng-hide');
+            });
+            /*党组织信息高级查询点击小三角变化*/
+            $(".advanced_query2").click(function(event) {
+                $(this).children('img').toggleClass('arrowd');
+                $(".p_organ_info .hidden_div").toggleClass("ng-hide");
+                if ($(".p_organ_info .hidden_div").hasClass('ng-hide')) {
+                  $("#nor_tg2").parent().css({"marginTop":20});
+                }else{
+                  $("#nor_tg2").parent().css({"marginTop":-52});
+                }
+            });
+            /*党组织信息传统列表之间切换*/
+            $("#nor_tg2").click(function(event) {
+              $(this).toggleClass('nor_now_toggle_a');
+              $(this).parents("li").children('.party_organize_list').toggleClass('ng-hide');
+            });
+
+            $(".setBtn").click(function(event) {
+               event.stopPropagation();
+        $(this).children('.zsgc_btns').toggleClass('ng-hide');
+      });
+        $(".setBtn").children('.zsgc_btns').click(function(event) {
+           event.stopPropagation();
+       });
+         });
+     </script>
+     <script type="text/javascript">
+$(document).ready(function() {
+ /*角色切换*/
+ $(".topr_ul li a").click(function(event) {
+   var texta=$(this).text();
+   $(".spanJs").text(texta);
+ });
+});
+     </script>
+     <script type="text/javascript">
+    /*表格隔行变色*/
+ $(document).ready(function() {
+   $(".dw_table_list tr:odd a").css({"background":"#f7a91a"});//odd为偶数行
+  $(".dw_table_list tr:even a").css({"background":"#fafafa"});//even为偶数行
+ });
+</script>
+</body>
+</html>

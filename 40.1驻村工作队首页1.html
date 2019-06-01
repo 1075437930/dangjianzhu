@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>南阳党建大数据平台</title>
+  <meta name="keywords" content="南阳党建大数据平台">
+  <meta name="description" content="南阳党建大数据平台">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="css/nydj_style.css"><!-- 页面主要css文件 -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="layui/layui.js"></script>
+  <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+  <script type="text/javascript" src="js/echarts.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <!--   兼容IE9以下的低版本浏览器对于css3的不支持以及对于媒体查询的不支持。 -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]--> 
+</head>
+<body>
+     <div class="wid_content bg_white">
+            <div class="container clearfix top_head">
+               <div class="top_title fl"><img src="images/dh.png" alt="">帮扶工作管理</div>
+               <div class="fr top_right">
+                    <a href="javascript:;" class="top_atoggle">角色切换</a>
+                    <a href="javascript:;" class="top_atoggle">操作说明</a>
+                    <a href="javascript:;" class="top_atoggle">返回首页</a>
+                    <a href="javascript:;" class="top_atoggle">返回上一页</a>
+               </div>
+            </div>
+     </div>
+     <div class="banner fb_maps" style="background:url(images/bn_bg1.jpg) no-repeat #f8851e;background-size:100% 100%;">
+            <div class="ban_title">南阳市驻村工作队情况分析</div>
+            <div id="slideBox" class="slideBox lbHeight">
+                  <div class="hd">
+                    <ul><li>1</li><li>2</li><li>3</li></ul>
+                  </div>
+                  <div class="bd">
+                      <ul>
+                        <li>
+                              <a href="javascript:;">
+                                    <div class="container">
+                                       <div class="clearfix">
+                                              <div class="layui-col-xs6 dy_charts1" id="echartMap_age"></div>
+                                              <div class="layui-col-xs6 dy_charts1" id="bfc_leixing"></div>
+                                        </div>
+                                    </div>
+                              </a>
+                        </li>
+                        <li>
+                              <a href="javascript:;">
+                                    <div class="container">
+                                       <div class="clearfix">
+                                              <div class="layui-col-xs6 dy_charts1" id="dy_sex2">3</div>
+                                              <div class="layui-col-xs6 dy_charts1" id="dy_sex3">4</div>
+                                        </div>
+                                    </div>
+                              </a>
+                        </li>
+                        <li>
+                              <a href="javascript:;">
+                                    <div class="container">
+                                       <div class="clearfix">
+                                              <div class="layui-col-xs6 dy_charts1" id="dy_sex4">5</div>
+                                              <div class="layui-col-xs6 dy_charts1" id="dy_sex5">6</div>
+                                        </div>
+                                    </div>
+                              </a>
+                        </li>
+                      </ul>
+                  </div>
+            </div>
+     </div>
+     <div class="con_outer">
+            <ul class="djtp_ul djtp_ul_w clearfix layui_zd-col-space52">
+                    <li>
+                        <a href="38.1帮扶村首页1.html">
+                              <img src="images/djztp_icon15.png" alt="">
+                              <p>帮扶村</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="39.1驻村第一书记首页1.html">
+                              <img src="images/djztp_icon11.png" alt="">
+                              <p>驻村第一书记</p>
+                        </a>
+                    </li>
+                    <li class="fcshow_active">
+                        <a href="stsgn5.html">
+                              <img src="images/djztp_icon12.png" alt="">
+                              <p>驻村工作队</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="41.1万民干部1.html">
+                              <img src="images/djztp_icon13.png" alt="">
+                              <p>万名干部助脱贫</p>
+                        </a>
+                    </li>
+              </ul>
+      </div>
+     <div class="wid_content">
+            <div class="container">
+                 <div class="clearfix dhhead martop10">
+                      <a href="40.3驻村工作队首页5.html" class="a_activebg">
+                            <div class="wz_num1">
+                                <p>南阳市</p>
+                                <p class="fontBIG">10000</p>
+                            </div>
+                      </a>
+                      <a href="40.91驻村工作队--考勤分析表.html" class="a_activekaoqin">
+                            <div class="wz_num1">
+                                <p>考勤管理</p>
+                            </div>
+                      </a>
+                 </div>
+                 <div class="borderDashed"></div>
+                 <table class="dw_table_list">
+                        <tr>
+                            <td>
+                                  <a href="javascript:;">
+                                      <div class="wz_num1">
+                                          <p>宛城区</p>
+                                          <p class="fontBIG">190000</p>
+                                      </div>
+                                 </a>
+                            </td>
+                            <td>
+                                  <a href="javascript:;">
+                                      <div class="wz_num1">
+                                          <p>卧龙区</p>
+                                          <p class="fontBIG">180000</p>
+                                      </div>
+                                 </a>
+                            </td>
+                            <td>
+                                  <a href="javascript:;">
+                                      <div class="wz_num1">
+                                          <p>高新技术产业开发区</p>
+                                          <p class="fontBIG">240000</p>
+                                      </div>
+                                 </a>
+                            </td>
+                            <td>
+                                  <a href="javascript:;">
+                                      <div class="wz_num1">
+                                          <p>城乡一体化示范区</p>
+                                          <p class="fontBIG">140000</p>
+                                      </div>
+                                 </a>
+                            </td> 
+                            <td>
+                                  <a href="javascript:;">
+                                      <div class="wz_num1">
+                                          <p>管庄工区</p>
+                                          <p class="fontBIG">2000</p>
+                                      </div>
+                                 </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                  <a href="javascript:;">
+                                      <div class="wz_num1">
+                                          <p>鸭河工区</p>
+                                          <p class="fontBIG">40000</p>
+                                      </div>
+                                 </a>
+                            </td>
+                            <td>
+                                  <a href="javascript:;">
+                                      <div class="wz_num1">
+                                          <p>邓州市</p>
+                                          <p class="fontBIG">20000</p>
+                                      </div>
+                                 </a>
+                            </td>
+                            <td>
+                                  <a href="javascript:;">
+                                      <div class="wz_num1">
+                                          <p>南召县</p>
+                                          <p class="fontBIG">5000</p>
+                                      </div>
+                                 </a>
+                            </td>
+                            <td>
+                                  <a href="javascript:;">
+                                      <div class="wz_num1">
+                                          <p>镇平县</p>
+                                          <p class="fontBIG">4000</p>
+                                      </div>
+                                 </a>
+                            </td>
+                            <td>
+                                  <a href="javascript:;">
+                                      <div class="wz_num1">
+                                          <p>内乡县</p>
+                                          <p class="fontBIG">3000</p>
+                                      </div>
+                                 </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                  <a href="javascript:;">
+                                      <div class="wz_num1">
+                                          <p>淅川县</p>
+                                          <p class="fontBIG">2000</p>
+                                      </div>
+                                 </a>
+                            </td>
+                            <td>
+                                  <a href="40.2驻村工作队首页2.html">
+                                      <div class="wz_num1">
+                                          <p>新野县</p>
+                                          <p class="fontBIG">3000</p>
+                                      </div>
+                                 </a>
+                            </td>
+                            <td>
+                                  <a href="javascript:;">
+                                      <div class="wz_num1">
+                                          <p>唐河县</p>
+                                          <p class="fontBIG">1000</p>
+                                      </div>
+                                 </a>
+                            </td>
+                            <td>
+                                  <a href="javascript:;">
+                                      <div class="wz_num1">
+                                          <p>桐柏县</p>
+                                          <p class="fontBIG">1000</p>
+                                      </div>
+                                 </a>
+                            </td>
+                            <td>
+                                  <a href="javascript:;">
+                                      <div class="wz_num1">
+                                          <p>方城县</p>
+                                          <p class="fontBIG">1000</p>
+                                      </div>
+                                 </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                  <a href="javascript:;">
+                                      <div class="wz_num1">
+                                          <p>西峡县</p>
+                                          <p class="fontBIG">1000</p>
+                                      </div>
+                                 </a>
+                            </td>
+                            <td>
+                                  <a href="javascript:;">
+                                      <div class="wz_num1">
+                                          <p>社旗县</p>
+                                          <p class="fontBIG">1000</p>
+                                      </div>
+                                 </a>
+                            </td>
+                        </tr>
+                  </table> 
+            </div>
+     </div>
+    <!--  layui表单js -->
+     <script>
+        layui.use(['form', 'laydate','laypage','table','layer'], function(){
+          var form = layui.form,laydate = layui.laydate,laypage = layui.laypage,table = layui.table,layer = layui.layer;
+           /*党员信息分页*/
+            laypage.render({
+              elem: 'pages'
+              ,count: 100
+              ,layout: ['count', 'prev', 'page', 'next']
+              ,theme:'#eb2d18'
+            });
+            /*党员组织分页*/
+            laypage.render({
+              elem: 'pages1'
+              ,count: 100
+              ,layout: ['count', 'prev', 'page', 'next']
+              ,theme:'#eb2d18'
+            });
+          /*党员表格*/
+          table.render({
+              elem: '#table_test'
+              ,url:'test.php'
+              ,cols: [[{field:'id', width:150, title: '序号'}
+                ,{field:'username', title: '姓名'}
+                ,{field:'sex', title: '身份证类型'}
+                ,{field:'city',  title: '派驻村'}
+              ]]
+              ,page:{theme: '#c00'}
+            });
+          /*党组织表格*/
+          table.render({
+              elem: '#tableOrgan_test'
+              ,url:'test.php'
+              ,cols: [[
+                {type:'radio'}
+                ,{field:'id', width:100, title: '序号'}
+                ,{field:'username', width:280, title: '党组织名称'}
+                ,{field:'sex', width:120, title: '党组织书记'}
+                ,{field:'city', width:140, title: '联系电话'}
+                ,{field:'sign', width:140,title: '党组织类别'}
+                ,{field:'experience', width:120, title: '成立时间'}
+                ,{field:'score', title: '党组织属性'}
+              ]]
+              ,page:{theme: '#c00'}
+            });
+          /*弹出层*/
+          //弹出一个页面层
+          /*党组织信息导航弹出*/
+        $('.sera_1').on('click', function(){
+          layer.open({
+            type: 2,
+            title: '党组织信息导航',
+            area: ['1200px', '460px'],
+            shadeClose: true, //点击遮罩关闭
+            content: 'http://lbsyun.baidu.com/jsdemo/demo/a1_2.htm'
+              });
+            });
+        /*党组织信息监控弹出*/
+        $('.sera_3').on('click', function(){
+                layer.open({
+                type: 2,
+                title: '党组织信息监控',
+                area: ['1200px', '460px'],
+                shadeClose: true,
+                content: 'http://player.youku.com/embed/XMjY3MzgzODg0'
+              });
+            });
+        });
+      </script>
+     <script type="text/javascript">
+$(document).ready(function() {
+ /*角色切换*/
+ $(".topr_ul li a").click(function(event) {
+   var texta=$(this).text();
+   $(".spanJs").text(texta);
+ });
+});
+     </script>
+     <script type="text/javascript">
+    /*表格隔行变色*/
+ $(document).ready(function() {
+   $(".dw_table_list tr:odd a").css({"background":"#f7a91a"});//odd为偶数行
+  $(".dw_table_list tr:even a").css({"background":"#fafafa"});//even为偶数行
+ });
+</script>
+<script type="text/javascript">
+  function fun(){
+    var myChart = echarts.init(document.getElementById('echartMap_age'));
+       /*var app.title = '11';*/
+option = {
+  title : {
+        text: '驻村工作队年龄分析',
+        x:'center',
+        textStyle: {
+                      color:'#fff300',
+                      fontSize: 24,
+                      fontFamily:'huawenxinweiRegular',
+                    },
+    },
+    legend: {
+        type: 'plain',
+        show: true,
+        data: ['20岁以下','20-30','30-40','40-50','50-60','60及以上'],
+        textStyle: {
+        color: '#fff'
+         },
+        type: 'scroll',
+        orient: 'vertical',
+        right: 0,
+        top: '30%',
+        bottom: 0,
+        pageTextStyle: {
+               color: '#fff',
+        }
+    },
+    calculable: true,
+    series: [
+        {
+            name:'漏斗图',
+            type:'funnel',
+            left: '0%',
+            top: 60,
+            //x2: 80,
+            bottom: 60,
+            width: '60%',
+            // height: {totalHeight} - y - y2,
+            min: 100,
+            max: 0,
+            minSize: '0%',
+            maxSize: '100%',
+            sort: 'descending',
+            gap: 2,
+            label: {
+                normal: {
+                    show: true,
+                    position: 'inside'
+                },
+                emphasis: {
+                    textStyle: {
+                        fontSize: 20
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    length: 10,
+                    lineStyle: {
+                        width: 1,
+                        type: 'solid'
+                    }
+                }
+            },
+            itemStyle: {
+                normal: {
+                    borderColor: '#fff',
+                    borderWidth: 1
+                }
+            },
+            data: [
+                {value: 180, name: '20岁以下'},
+                {value: 100, name: '20-30'},
+                {value: 80, name: '30-40'},
+                {value: 60, name: '40-50'},
+                {value: 40, name: '50-60'},
+                {value: 40, name: '60及以上'}
+            ]
+        }
+    ],
+    color:['#00b4ff','#0096ff', '#3382e4' ,'#276dc3' , '#225faa', '#0c4394']
+};
+       myChart.setOption(option);
+  }
+    </script>
+    <script type="text/javascript">
+     function fun1(){
+          // 党员性别分析
+       var myChart = echarts.init(document.getElementById('bfc_leixing'));
+option = {
+    title : {
+        text: '驻村工作队性别占比',
+        x:'center',
+        textStyle: {
+                      color:'#fff300',
+                      fontSize: 24,
+                      fontFamily:'huawenxinweiRegular',
+                    },
+    },
+    color:['#eb3b01','#64bd52'],
+    textStyle: {
+        color: '#fff',
+    },
+    legend: {
+        show: false,
+        orient: 'vertical',
+        left: 'right',
+        data: ['男','女']
+    },
+    series : [
+        {
+            name: '访问来源',
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '60%'],
+            data:[
+                {value:335, name:'男'},
+                {value:310, name:'女'}
+            ],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+ myChart.setOption(option);
+     }
+    </script>
+   <script type="text/javascript">
+       jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true,startFun:function(i,c){
+           fun();fun1();
+         },});
+</script>
+</body>
+</html>
