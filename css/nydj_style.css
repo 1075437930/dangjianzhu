@@ -5,6 +5,9 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
+body{
+    background: #F1F4F9
+}
 /* 去除iPhone中默认的input样式  清除苹果浏览器的圆角表单*/
 input[type="submit"],
 
@@ -221,7 +224,7 @@ html,body{font-size:14px;}
 .imgupload1 .layui-btn {width: 100%;height: 100%;position: absolute;left: 0;top: 0;background: transparent;}
 .imgupload1 img {width: 60px;display: inline-block;}
 .imgupload1 p {text-align: center;color: #999;font-size: 12px;line-height: 40px;}
-.wid1{width: 1000px;margin:0 auto;}
+.wid1{width: 100%;margin:0 auto;}
 .s_img{width: 16px;display: inline-block;vertical-align: middle;margin-right: 10px;}
 .ac_dehxqd .location-ad input {background: url(../images/addpng.png) no-repeat 99% center;background-size: auto auto;background-size: 16px;padding-right: 40px;}
 .ac_dehxqd .layui-form-item .layui-form-label{text-align: left;}
@@ -882,7 +885,7 @@ ul.ztree {z-index: 999999;margin-top: 0px;border: 0px solid #FFE1FF;background: 
 .dj_mart100{margin-top: 100px;}
 .grow_djztp{margin-bottom: 100px;}
 .layui_zd-col-space131{margin: 30px -131.25px;}
-.layui_zd-col-space131>*{padding: 30px 131.25px;}
+.layui_zd-col-space131>*{padding: 30px 124.25px;}
 .fcshow_active a{background: rgba(0,0,0,0.1)!important;}
 .fcshow_active a p{color: #ff5742!important;}
 .party_member_lsit .member_div{position: relative;}
@@ -968,7 +971,7 @@ border-color: #f83838;color: transparent;background: url(../images/djztp_icon29.
 .velli_details>div{font-size: 16px;line-height: 38px;}
 .lefttitle{text-align: right;}
 .leftlabel .layui-form-label{width: 120px;}
-.leftlabel .layui-input-block { margin-left: 160px;}
+/* .leftlabel .layui-input-block { margin-left: 160px;} */
 .bf_charts{height: 500px;}
 .sipleTextW{line-height: 38px;word-wrap:break-word}
 .a_activekaoqin{background: #eb6100!important;}
@@ -1132,3 +1135,93 @@ font-weight: bold;border-top-left-radius: 8px;border-top-right-radius: 8px;}
 .upedlistSmall .layui-upload-img{ width: 276px;height: 200px;border: 1px solid #ddd;}
 .layui-col-space28{margin:-14px}
 .layui-col-space28>*{padding:14px}
+
+
+.margin-top-30{
+    margin-top: 30px
+}
+.margin-top-23{
+    margin-top: 23px
+}
+.jiben_xinxi{
+        
+}
+.padding-left-30{
+    padding-left: 30px
+}
+
+.color-red{
+    color: #dd2621;
+    
+}
+
+.font-size-24{
+    font-size: 24px
+}
+
+.pannels{
+    background: white;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    box-sizing: border-box
+}
+
+.pannels-jiben_xinxi{
+    /* height: 249px; */
+   
+}
+
+.pannels-jiben_xinxi table{
+    margin-left: 180px;
+    width: 535px;
+    height: 202px;
+
+}
+.pannels-jiben_xinxi table td{
+    text-align: center;
+    border: 1px solid #f1f1f1
+}
+.bc-hui {
+  background-color: rgb( 244, 244, 244 );
+ 
+  width: 159px;
+  height: 49px;
+  border-bottom: 1px solid #ffffff!important
+}
+
+.do_title{
+    color: #333333;
+    text-align: center
+}
+.neir{
+    width: 1144px;
+    margin: 0 auto
+}
+.neir p{
+    color: #666666;
+    font-size: 18px;
+    text-indent: 36px;
+    line-height: 38px;
+}
+.neir img{
+    width: 844px;
+    display: block;
+    margin: 0 auto
+}
+
+.padding-20{
+    padding: 20px
+}
+
+.dwd{
+    width: 435px!important;
+}
+
+.xiba{
+    width: 86px!important;
+
+}
+
+.jh{
+    margin-bottom: 14px!important;
+}

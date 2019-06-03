@@ -37,51 +37,82 @@
                </div>
             </div>
      </div>
-     <div class="wid_content tp_mart100 bg_white">
+     <div class="wid_content   " style="width: 1200px;margin:0 auto">
             <div class="clearfix">
                 <div class="threeDivTog martop10">
                      <div class="ac_dehxqd leftlabel">
                            <div class="wid1">
-                                 <form class="layui-form" action="">
-                                      <div class="layui-form-item">
-                                          <label class="layui-form-label">村名称</label>
-                                          <div class="layui-input-block">
-                                             <input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+                                 <form class="layui-form " action="">
+                                      <div class="layui-form-item bg_white padding-20 ">
+                                          <div class="layui-inline jh">
+                                              <label class="layui-form-label xiba">村名称:</label>
+                                              <div class="layui-input-inline dwd" >
+                                                <input type="password" name="" autocomplete="off" class="layui-input">
+                                              </div>
+                                          </div>
+
+                                          <div class="layui-inline jh">
+                                              <label class="layui-form-label xiba">总人口数:</label>
+                                              <div class="layui-input-inline dwd" >
+                                                <input type="password" name="" autocomplete="off" class="layui-input">
+                                              </div>
+                                          </div>
+
+                                          <div class="layui-inline jh">
+                                              <label class="layui-form-label xiba">联系电话:</label>
+                                              <div class="layui-input-inline dwd" >
+                                                <input type="password" name="" autocomplete="off" class="layui-input">
+                                              </div>
+                                          </div>
+
+                                          <div class="layui-inline jh">
+                                              <label class="layui-form-label xiba">负责人:</label>
+                                              <div class="layui-input-inline dwd" >
+                                                <input type="password" name="" autocomplete="off" class="layui-input">
+                                              </div>
+                                          </div>
+
+                                          <div class="layui-inline jh">
+                                              <label class="layui-form-label xiba">所属区域:</label>
+                                              <div class="layui-input-inline dwd" >
+                                                <input type="password" name="" autocomplete="off" class="layui-input">
+                                              </div>
                                           </div>
                                       </div>
-                                      <div class="layui-form-item">
-                                        <label class="layui-form-label">实施方案</label>
-                                        <div class="layui-input-block">
+                                      <div class="layui-form-item bg_white padding-20">
+                                        <label class="layui-form-label xiba">实施方案</label>
+                                        <div class="layui-input-block" style="width: 1016px">
                                             <textarea id="editText" style="display: none;"></textarea>
                                         </div>
                                      </div>
-                                     <div class="layui-form-item">
-                                        <label class="layui-form-label">发展状况</label>
-                                        <div class="layui-input-block">
+                                     <div class="layui-form-item bg_white padding-20">
+                                        <label class="layui-form-label bg_white xiba">发展状况</label>
+                                        <div class="layui-input-block" style="width: 1016px">
                                             <textarea id="editText1" style="display: none;"></textarea>
                                         </div>
                                      </div>
-                                     <div class="layui-form-item">
-                                            <label class="layui-form-label">所属区域</label>
+                                     <div class="layui-form-item bg_white padding-20">
+                                            <label class="layui-form-label bg_white xiba" style="width: 1011px">所属区域</label>
                                             <div class="layui-input-block">
-                                                <div class="fieldInputDiv fl">
+                                                <div class="fieldInputDiv fl" style="width: 1011px">
                                                      <input class="layui-input" type="text" id="partyAddress" readonly="" placeholder="请选择">
                                                        <i></i>
                                                  </div>
                                            </div>
                                      </div>
-                                     <div class="layui-form-item">
-                                            <label class="layui-form-label">请输入搜索地图位置</label>
-                                            <div class="layui-input-block location-ad" style="width: 840px;">
-                                                <input type="text" class="layui-input" id="suggestId" size="20" value="" autocomplete="off">
+                                     <div class="layui-form-item  bg_white padding-20">
+                                            <label class="layui-form-label bg_white xiba">请输入位置</label>
+                                            <div class="layui-input-block location-ad" >
+                                                <input type="text" style="width: 1011px" class="layui-input" id="suggestId" size="20" value="" autocomplete="off">
                                             </div>
+                                            <iframe src="https://map.baidu.com/" style="width:1011px;height:460px;margin-left: 115px;margin-top:23px"></iframe>
                                       </div>
-                                      <div class="layui-form-item">
+                                      <!-- <div class="layui-form-item">
                                             <label class="layui-form-label">&nbsp;&nbsp;&nbsp;&nbsp;</label>
                                             <div class="layui-input-block">
                                                   <iframe src="https://map.baidu.com/" style="width:100%;height:460px;"></iframe>
                                             </div>
-                                      </div>
+                                      </div> -->
                                      <div class="text-align-center dw_infoSave">
                                              <button class="layui-btn btn_long layui-btn-primary">返回</button>
                                             <button class="layui-btn btn_long bg-red">提交</button>

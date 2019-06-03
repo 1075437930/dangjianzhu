@@ -54,7 +54,7 @@
                 jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
             </script>
      </div>
-     <div class="con_outer">
+     <div class="con_outer bg_white" style="padding: 0 20px;box-sizing: border-box">
             <ul class="djtp_ul clearfix layui_zd-col-space131">
                     <li class="fcshow_active">
                         <a href="stsgn2.html">
@@ -75,41 +75,44 @@
                         </a>
                     </li>
               </ul>
+
+              <form class="layui-form" action="">
+                <div class="layui-row clearfix">
+                     <div class="layui-col-zd-xs1 padRight20">
+                           <div class="layui-form-item">
+                               <div class="fieldInputDiv fl">
+                                   <input class="layui-input" type="text" id="partyAddress" readonly="" placeholder="请选择">
+                                     <i></i>
+                               </div>
+                            </div>
+                     </div>
+                     <div class="layui-col-zd-xs0">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                     <div class="layui-col-zd-xs1">
+                           <div class="layui-form-item">
+                                 <input type="text" class="layui-input serchpad fl" placeholder="请输入" style="width:83%;">
+                                 <button class="layui-btn bg-red fl" type="button"><i class="layui-icon layui-icon-search" style="font-size: 24px; color: #fff;"></i>查询</button>
+                           </div>
+                     </div>
+                </div>
+           </form>
+           <div class="togglenav text-align-right" style="padding: 0 0 20px;">
+                 <div class="setBtn">
+                           <img src="images/gl.png" alt="">
+                           <div class="layui-inline zsgc_btns ng-hide">
+                                 <a href="32.2风采展示--添加.html" onclick="addPartyMember()" class="layui-btn layui-btn-primary"><i class="layui-icon layui-icon-add-1"></i>添加</a>
+                                  <a href="32.3风采展示--修改.html" onclick="updatePartyMember()" class="layui-btn layui-btn-primary"><i class="layui-icon layui-icon-edit"></i>修改</a>
+                                  <a href="javascript:;" onclick="delPartyMember()" class="layui-btn layui-btn-primary" id="delete1"><i class="layui-icon layui-icon-delete"></i>删除</a>
+                          </div>
+                 </div>
+                 <div class="nor_now_toggle" id="nor_tg1" style="padding:0"></div>
+           </div>
+              
       </div>
-      <div class="wid_content">
+      <div class="wid_content" style="margin-top: 41px">
            <div class="container bg_white partycontainer">
                   <ul class="party_form_con">
                         <li class="p_memeber">
-                             <form class="layui-form" action="">
-                                  <div class="layui-row clearfix">
-                                       <div class="layui-col-zd-xs1 padRight20">
-                                             <div class="layui-form-item">
-                                                 <div class="fieldInputDiv fl">
-                                                     <input class="layui-input" type="text" id="partyAddress" readonly="" placeholder="请选择">
-                                                       <i></i>
-                                                 </div>
-                                              </div>
-                                       </div>
-                                       <div class="layui-col-zd-xs0">&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                                       <div class="layui-col-zd-xs1">
-                                             <div class="layui-form-item">
-                                                   <input type="text" class="layui-input serchpad fl" placeholder="请输入" style="width:84%;">
-                                                   <button class="layui-btn bg-red fl" type="button"><i class="layui-icon layui-icon-search" style="font-size: 24px; color: #fff;"></i>查询</button>
-                                             </div>
-                                       </div>
-                                  </div>
-                             </form>
-                             <div class="togglenav text-align-right" style="padding: 0 0 20px;">
-                                   <div class="setBtn">
-                                             <img src="images/gl.png" alt="">
-                                             <div class="layui-inline zsgc_btns ng-hide">
-                                                   <a href="32.2风采展示--添加.html" onclick="addPartyMember()" class="layui-btn layui-btn-primary"><i class="layui-icon layui-icon-add-1"></i>添加</a>
-                                                    <a href="32.3风采展示--修改.html" onclick="updatePartyMember()" class="layui-btn layui-btn-primary"><i class="layui-icon layui-icon-edit"></i>修改</a>
-                                                    <a href="javascript:;" onclick="delPartyMember()" class="layui-btn layui-btn-primary" id="delete1"><i class="layui-icon layui-icon-delete"></i>删除</a>
-                                            </div>
-                                   </div>
-                                   <div class="nor_now_toggle" id="nor_tg1" style="padding:0"></div>
-                             </div>
+                             
                              <div style="width:100%;height:40px;background:#fff;"></div>
                              <div class="party_member_lsit">
                                    <div class="clearfix layui-col-space15">
